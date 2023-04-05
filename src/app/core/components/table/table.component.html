@@ -1,0 +1,63 @@
+<div class="card">
+	<div class="card-body p-0" style="overflow-x: auto">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col-auto ">Account</th>
+					<th scope="col-auto">Project Name</th>
+					<th scope="col-auto">Domain</th>
+					<th scope="col-auto">Client</th>
+					<th scope="col-auto">Team Size</th>
+					<th scope="col-auto">Owner</th>
+					<th scope="col-auto">Start Date</th>
+					<th scope="col-auto">Evaluation Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let country of countries">
+					<!-- <th scope="row">{{ country.id }}</th> -->
+					<td>
+						{{ country.account }}
+					</td>
+					<td>{{ country.project_name }}</td>
+					<td>{{ country.domain }}</td>
+					<td>{{ country.client }}</td>
+					<td class="align">{{ country.team_size | number }}</td>
+					<td>{{ country.owner }}</td>
+					<td>{{ country.start_date }}</td>
+					<td>
+						<!-- <img
+					[src]="'assets/images/' + country.status_color"
+					class="me-2"
+					style="width: 20px"
+				/>  -->
+						<img [src]="'assets/images/' + country.status + '.svg'" class="me-2" style="width: 20px" />
+						{{ country.status }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+
+		<div class="d-flex justify-content-between p-2">
+			<p>{{ collectionSize }} Entries found</p>
+			<div class="d-flex ms-3">
+			<div class="row-dropdownp">
+				<span>rows per page : </span>
+				<select class="form-select" style="width: auto" [(ngModel)]="pageSize"
+					(ngModelChange)="refreshCountries()">
+					<option [ngValue]="2">2</option>
+					<option [ngValue]="4">4</option>
+					<option [ngValue]="6">6</option>
+					<option [ngValue]="10">10</option>
+				</select>
+			</div>
+			<div class="row-dropdownp">
+				<ngb-pagination class="pagination" [collectionSize]="collectionSize" [(page)]="page"
+					[pageSize]="pageSize" (pageChange)="refreshCountries()">
+				</ngb-pagination>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>

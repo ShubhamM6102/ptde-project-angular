@@ -1,0 +1,296 @@
+@import './src/scss/theme/colors.scss';
+
+//----HEADER-PART----------
+
+.header {
+    transition: all 0.5s;
+    z-index: 997;
+    height: 92px;
+    box-shadow: 0px 2px 20px rgb(1 41 112 / 10%);
+    // background-color: #fff;
+    background-color: $white;
+    padding-left: 10px;
+    padding-top: 3px;
+ //   border-bottom: 1px solid red;
+
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 56px;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+//------CNX-LOGO---------------
+.logo {
+  //  width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.cnx-logo {
+    width: 114px;
+    height: 22px;
+    margin-right: 70px;
+    margin-left: 10px;
+}
+
+.logo .fa-bars{
+    font-size: 22px;
+}
+
+//--SEARCHBAR-PART------
+.searchbar {
+    width: 50%;
+}
+
+.form {
+    position: relative;
+    width: 300px;
+}
+
+// .form .fa-magnifying-glass {
+//     position: absolute;
+//     top: 13px;
+//     left: 12px;
+//     color: #7b6ffb;
+// }
+
+.form span {
+    position: absolute;
+    // right: 12px;
+    top: 7px;
+    left: 10px;
+    font-size: 17px;
+    // right: 12px;
+    // top: 10px;
+    // padding: 5px;
+    // border-left: 1px solid #d1d5db;
+}
+
+.form-input {
+    font-size: 14px;
+    line-height: 18px;
+    height: 40px;
+    width: 346px;
+    text-indent: 3px;
+    padding: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    // background-color: #f1f1f1;
+    background-color: $gray-light;
+    border-radius: 0px;
+    // border-radius: 10px;
+    // border:1px solid black;
+}
+
+.form-input:focus {
+
+    box-shadow: none;
+    border: 1px solid $secondary-rusty-red;
+}
+
+//-------RIGHTNAV-PART---------
+.header-nav {
+    display: flex;
+
+}
+
+.header-nav>ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.header-nav li {
+    list-style: none;
+}
+
+.list-group-item {
+    border: none;
+    list-style: none;
+    background-color: inherit;
+    margin-right: 8px;
+    padding: 0px;
+}
+
+//------icons-part------------
+.icon-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    margin-right: 5px;
+    // color: #333333;
+    // color: #4154f1;
+    color:$header-icon-color;
+    background: inherit;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+
+.icon-button:hover {
+    cursor: pointer;
+}
+
+.icon-button:active {
+    background:$header-icon-button;
+}
+
+//----badge-part--------
+.icon-button__badge {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    width: 10px;
+    height: 10px;
+    font-size: 0px;
+    font-weight: bold;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.bell-badge {
+    border-radius: 50%;
+}
+
+.message-badge {
+    border-radius: 50%;
+}
+
+//-------------avatar-part---------
+.avatar {
+    vertical-align: middle;
+    // width: 46px;
+    // height: 46px;
+    position: relative;
+    top: -2px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.circle-text{
+    position:absolute;
+    left: 8px;
+    top: 6px;
+    color: $white ;
+    font-weight: 600;
+}
+
+.btn-group .btn {
+    background-color: inherit;
+    font-size: 16px;
+    color:$black;
+    border: none;
+}
+.search-feather{
+    display: none;
+    position: relative;
+    top: 6px;
+    margin-right: 10px;
+}
+.designation{
+    font-size: 12px !important;
+    padding: 0 !important;
+    position: absolute;
+    left: 60px;
+    top: 24px;
+}
+
+  .overlay{
+        display: none;
+     }
+     .dropdown-menu {
+        margin-top: 25px !important;
+     }
+
+
+@media screen and (max-width: 1079px) {
+    .searchbar {
+        width: 20%;
+    }
+    
+    .form {
+        position: relative;
+        width: 100%;
+    }
+    .cnx-logo {
+        margin-right: 30px;
+    }
+  }
+
+  @media screen and (max-width: 940px) {
+    .btn-group  {
+       display: none;
+    }
+    .designation{
+        display: none;
+    }
+//420
+
+   
+  }
+
+  @media screen and (max-width: 890px) {
+    .searchbar {
+        display: none;
+    }
+
+    .search-feather{
+        display:block ;
+      
+    }
+  }
+
+    @media screen and (max-width: 820px) {
+    .fa-bars{
+        display: none;
+    }
+        .overlay{
+        display: block;
+     }
+     .list-group-horizontal {
+        display: none;
+    }
+    .logo{
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 5px 0 5px;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .logo{
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 5px 0 5px;
+    }
+
+    .avatar{
+        display:none;
+    }
+    .list-group-horizontal {
+        display: none;
+    }
+    
+  }
+
+  @media screen and (max-width: 380px) {
+ 
+    .search-feather{
+        display:none ;
+      
+    }
+}

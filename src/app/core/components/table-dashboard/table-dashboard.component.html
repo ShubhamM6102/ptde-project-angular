@@ -1,0 +1,134 @@
+<div class="card select-box mb-4">
+    <div class="card-body select-box-flex">
+        <!-- <app-accounts></app-accounts> -->
+        <div class="select_box">
+            <label> Accounts</label>
+            <select class="form-select" [(ngModel)]="selectedAccount">
+                <option value="">All</option>
+                <!-- <option *ngFor="let option of account" [value]="option.value">
+                    {{ option.label }}
+                </option> -->
+                <option *ngFor="let account of uniqueAccount" [value]="account">
+                    {{ account}}
+                </option>
+                <!-- <option *ngFor="let employee of projects" [value]="employee.account">{{ employee.account }}</option> -->
+            </select>
+        </div>
+
+        <div class="select_box">
+            <label>Domains</label>
+            <select class="form-select" [(ngModel)]="selectedDomain">
+                <option value="">All</option>
+                <!-- <option *ngFor="let option of domain" [value]="option.value">
+                    {{ option.label }}
+                </option> -->
+                <option *ngFor="let domain of uniqueDomain" [value]="domain">
+                    {{domain}}
+                  </option>
+                <!-- <option *ngFor="let employee of projects" [value]="employee.domain">{{ employee.domain }}</option> -->
+            </select>
+        </div>
+
+        <div class="select_box">
+            <label>Evaluation status</label>
+            <select class="form-select" [(ngModel)]="selectedStatus">
+                <option value="">All</option>
+                <option *ngFor="let status of uniqueStatus" [value]="status">
+                    {{ status }}
+                </option>
+                <!-- <option *ngFor="let employee of projects" [value]="employee.status">{{ employee.status }}</option> -->
+            </select>
+        </div>
+
+        <app-create-acount class=" btn p-0 " [text]="'Create Account'"></app-create-acount>
+    </div>
+</div>
+
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<div class="card">
+    <div class="card-body p-0" style="overflow-x: auto">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col-auto ">Account</th>
+                    <th scope="col-auto">Project Name</th>
+                    <th scope="col-auto">Domain</th>
+                    <th scope="col-auto">Client</th>
+                    <th scope="col-auto ps-2">Team Size</th>
+                    <th scope="col-auto">Owner</th>
+                    <th scope="col-auto">Start Date</th>
+                    <th scope="col-auto">Evaluation Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let country of getPaginatedEmployees() | filter:selectedAccount:'account' | filter:selectedDomain:'domain' | filter:selectedStatus:'status'">
+                    <!-- <th scope="row">{{ country.id }}</th> -->
+                    <td>
+                        {{ country.account }}
+                    </td>
+                    <td>{{ country.project_name }}</td>
+                    <td>{{ country.domain }}</td>
+                    <td>{{ country.client }}</td>
+                    <td class="align ">{{ country.team_size | number }}</td>
+                    <td>{{ country.owner }}</td>
+                    <td>{{ country.start_date }}</td>
+                    <td>
+                        <!-- <img
+					[src]="'assets/images/' + country.status_color"
+					class="me-2"
+					style="width: 20px"
+				/>  -->
+                        <img [src]="'assets/images/svg/' + country.status + '.svg'" class="me-2" style="width: 20px" />
+                        {{ country.status }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <div>
+            <select [(ngModel)]="pageSize">
+              <option *ngFor="let option of rowsPerPageOptions" [value]="option">{{option}}</option>
+            </select>
+          </div>
+          
+        <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+
+         <div class="d-flex justify-content-between p-2">
+            <p>{{totalRows}} Entries found</p>
+			<div class="d-flex ms-3">
+			<div class="row-dropdownp">
+				<span>Rows per page : </span>
+                <select class="form-select" style="width: auto" [(ngModel)]="itemsPerPage" >
+                    <!-- <option *ngFor="let option of pageSizeOptions" [ngvalue]="option">{{ option }}</option> -->
+              
+                  <option [ngValue]="2">2</option>
+                  <option [ngValue]="4">4</option>
+                  <option [ngValue]="6">6</option>
+                  <option [ngValue]="10">10</option>
+                </select>
+			</div>
+			<div class="row-dropdownp">
+                <ngb-pagination [collectionSize]="totalRows" [(page)]="currentPage" [pageSize]="itemsPerPage"    ></ngb-pagination>
+			</div>
+		</div> 
+        
+    </div>
+</div>
+
+
+
+<form (ngSubmit)="addEmployee() " class="d-flex-column add-form">
+    <input type="text" class="form-control " [(ngModel)]="newEmployee.account" placeholder="Account Name" name="account">
+    <input type="text"  class="form-control" [(ngModel)]="newEmployee.project_name" placeholder="Project Name" name="project-name"> 
+    <input type="text"  class="form-control" [(ngModel)]="newEmployee.domain" placeholder="Domain" name="domain">
+    <input type="text"  class="form-control" [(ngModel)]="newEmployee.client" placeholder="Client" name="client">
+    <input type="text"  class="form-control" [(ngModel)]="newEmployee.team_size" placeholder="team size" name="team-size">
+    <input type="text"  class="form-control" [(ngModel)]="newEmployee.owner" placeholder="Owner" name="owner">
+    <input type="text"  class="form-control" [(ngModel)]="newEmployee.start_date" placeholder="Date" name="start-date">
+    <input type="text"  class="form-control" [(ngModel)]="newEmployee.status" placeholder="Status" name="status">
+    <!-- <input type="text" [(ngModel)]="newEmployee.status_color" placeholder="Designation" name="status-clor"> -->
+    <button class="btn btn-primary"  type="submit" >Add</button>
+  </form>
+
+

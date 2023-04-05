@@ -1,0 +1,67 @@
+.card{
+    margin-top: 24px;
+}
+.align{
+    // text-align: center;
+    padding-left: 30px;
+}
+thead{
+    background-color: #003366;
+    color: #ffffff;
+    height: 68px;
+}
+
+th{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500 !important;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+td{
+    height: 52px;
+    padding-left: 30px;
+}
+
+ngb-pagination::ng-deep ul > li:not(.active) > a {
+   // background-color: red !important;
+   color:  #110F24 !important;
+   height: 40px !important ;
+   padding: 5px !important;
+   width: 40px !important;
+   text-align: center;
+}
+
+ngb-pagination::ng-deep ul > li.active > a {
+    background-color: #003366 !important;
+    height: 40px !important ;
+    padding: 5px !important;
+    width: 40px !important;
+    text-align: center;
+}
+
+.row-dropdownp{
+    display: flex;
+   // justify-content: center;
+    align-items: baseline;
+    margin-right: 20px;
+}
+
+.form-select{
+    border-radius: 4px;
+    border: 1px solid #ECECEC;
+    margin-left: 5px;
+}
+
+span{
+    min-width: 124px;
+}
+
+p{
+    color: #003366;
+    align-self: center;
+    padding: 10px;
+    font-size: 16px !important;
+    
+}

@@ -1,0 +1,94 @@
+
+<div class="card select-box mb-4">
+    <div class="card-body select-box-flex">
+        <!-- <app-accounts></app-accounts> -->
+        <div class="select_box">
+            <label> Select Account</label>
+            <select class="form-select" [(ngModel)]="selectedAccount">
+                <option value="">All Accounts</option>
+                <!-- <option *ngFor="let option of account" [value]="option.value">
+                    {{ option.label }}
+                </option> -->
+                <option *ngFor="let option of uniqueAccount" [value]="option">
+                    {{ option  }}
+                </option>
+                <!-- <option *ngFor="let employee of projects" [value]="employee.account">{{ employee.account }}</option> -->
+            </select>
+        </div>
+
+        <div class="select_box">
+            <label>Technology</label>
+            <select class="form-select" [(ngModel)]="selectedTechnology">
+                <option value="">React, Angular, NodeJs</option>
+                <!-- <option *ngFor="let option of domain" [value]="option.value">
+                    {{ option.label }}
+                </option> -->
+                <option *ngFor="let technology of uniqueTechnology" [value]="technology">
+                    {{technology}}
+                  </option>
+                <!-- <option *ngFor="let employee of projects" [value]="employee.domain">{{ employee.domain }}</option> -->
+            </select>
+        </div>
+
+        <!-- <div class="select_box">
+            <label>Evaluation status</label>
+            <select class="form-select" [(ngModel)]="selectedTechnology">
+                <option value="">All</option>
+                <option *ngFor="let option of status" [value]="option.value">
+                    {{ option.label }}
+                </option>
+            </select>
+        </div> -->
+
+        <!-- <app-create-acount class=" btn p-0 " [text]="'Create Account'"></app-create-acount> -->
+    </div>
+</div>
+
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<div class="card">
+    <div class="card-body p-0" style="overflow-x: auto">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col-auto ">Account/Client</th>
+                    <th scope="col-auto">Project Name</th>
+                    <th scope="col-auto">Manager Name</th>
+                    <th scope="col-auto">Resource Name</th>
+                    <th scope="col-auto">Status</th>
+                    <!-- <th scope="col-auto">Owner</th>
+                    <th scope="col-auto">Start Date</th>
+                    <th scope="col-auto">Evaluation Status</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let country of getPaginatedEmployees()  | filter:selectedAccount:'account' | filter:selectedTechnology:'technology'">
+                    <!-- <th scope="row">{{ country.id }}</th> -->
+                    <td>
+                        {{ country.account }}
+                    </td>
+                    <td>{{ country.project_name }}</td>
+                    <td>{{ country.manager_name }}</td>
+                    <td>{{ country.resource_name }}</td>
+                    <td>{{ country.status }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="d-flex justify-content-between p-2">
+            <p>{{totalRows}} Entries found</p>
+			<div class="d-flex ms-3">
+			<div class="row-dropdownp">
+				<span>Rows per page : </span>
+                <select class="form-select" style="width: auto" [(ngModel)]="itemsPerPage">
+                    <option *ngFor="let option of pageSizeOptions" [value]="option">{{ option }}</option>
+                  </select>
+			</div>
+			<div class="row-dropdownp">
+                <ngb-pagination [collectionSize]="totalRows" [(page)]="currentPage" [pageSize]="itemsPerPage" ></ngb-pagination>
+			</div>
+		</div>
+        
+    </div>
+</div>

@@ -1,0 +1,19 @@
+@import './scss/theme/colors.scss';
+@import './scss/theme/dark.scss';
+@import './scss/theme/light.scss';
+@import './scss/mixins/typography.scss';
+@import './scss/variables/typography.scss';
+@import './scss/variables/buttons.scss';
+@import './scss/variables/table.scss';
+// @import './scss/variables/select.scss';
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+html,
+body {
+    height: 100%;
+   // font-family: 
+   margin: 0px;
+   font-family: 'Montserrat' !important;
+   background-color:  #ECECF3 !important;
+}
+
+@import 'bootstrap/scss/bootstrap';

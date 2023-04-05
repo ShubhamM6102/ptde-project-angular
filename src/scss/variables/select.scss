@@ -1,0 +1,10 @@
+@use '../theme/colors.scss';
+
+.form-select {
+    border-radius: 4px;
+    margin-left: 5px;
+    width: 277px;
+    height: 40px;
+    border: 1px solid colors.$border-select;
+    color:  colors.$color-select !important;
+}

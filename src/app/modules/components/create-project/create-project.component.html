@@ -1,0 +1,179 @@
+<h6>Create Account / Project</h6>
+<div class="card">
+  <div class="card-body">
+
+    <!-- ----------------------------Create New Account-------------------------- -->
+
+    <div class="account-section">
+      <div class="select-account">
+        <label for="exampleFormControlInput1" class="form-label">Select Account</label>
+        <select [(ngModel)]="Select" class="form-select" aria-label="Default select example" placeholder="Username">
+          <option value="-1" selected>Choose Account</option>
+          <option value="1">UPRR</option>
+          <option value="2">Valmont</option>
+          <option value="3">T-Mobile</option>
+          <option>Fx-360</option>
+          <option>CommonSpirit</option>
+        </select>
+      </div>
+      <button class="align-self-end  mt-2 btn btn-primary btn-width" [disabled]="Select==0" data-bs-toggle="collapse"
+        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <img src="assets/images/svg/plus.svg" alt="profile svg" class="p-2" />
+        Create New
+        Account
+      </button>
+
+    </div>
+
+    <!-- ----------------------------Create New Project-------------------------- -->
+    <div class="collapse" id="collapseExample">
+      <div class="account-section">
+        <div class="select-account">
+          <label for="exampleFormControlInput1" class="form-label">Account Name :</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Account Name"
+            [(ngModel)]="Account_Name">
+        </div>
+
+        <button class="align-self-end  mt-2 btn btn-primary btn-width" [disabled]="Account_Name ==''|| Select==0"
+          data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false"
+          aria-controls="collapseExample">
+          <img src="assets/images/svg/plus.svg" alt="profile svg" class="p-2" />
+          Create New Project</button>
+      </div>
+    </div>
+
+    <!-- ----------------------------Name and Assign to-------------------------- -->
+
+    <div class="collapse" id="collapseExample1">
+      <div class="account-section ">
+        <div class="select-account">
+          <label for="exampleFormControlInput1" class="form-label">Project Name :</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Project Name"
+            [(ngModel)]="Project_Name" required />
+        </div>
+
+        <div class="select-account">
+          <label for="exampleFormControlInput1" class="form-label">Assigned to : (Email)</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter e-mail address" [(ngModel)]="Email"
+            name="email" required email #email="ngModel" />
+          <!-- [(ngModel)]="Email" required/> -->
+        </div>
+        <!-- <app-create-acount class="align-self-end  mt-2" [text]="'Create & Assign'"[btnClass]="'p-2 pe-3'"></app-create-acount> -->
+      </div>
+
+      <!-- ----------------------------Buttons-------------------------- -->
+      <div class="button-box">
+        <button class="btn btn-secondary"
+          [disabled]="Account_Name =='' || Project_Name=='' || !email.valid || Select==-1"
+          (click)="reset()">Cancel</button>
+        <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary assign" (click)="modal()"
+          [disabled]="Account_Name =='' || Project_Name=='' || !email.valid || Select==-1">Create &
+          Assign
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- </div> -->
+
+<!-------------------------------------------------Modal Pop-Up ------------------------------------------->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <!-- <h5 class="modal-title">Modal title</h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        {{project}} Project Created
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<form (ngSubmit)="addEmployee() " class="d-flex-column add-form">
+  <input type="text" class="form-control " [(ngModel)]="newEmployee.account" placeholder="Account Name" name="account">
+  <input type="text" class="form-control" [(ngModel)]="newEmployee.project_name" placeholder="Project Name"
+    name="project-name">
+  <input type="text" class="form-control" [(ngModel)]="newEmployee.domain" placeholder="Domain" name="domain">
+  <input type="text" class="form-control" [(ngModel)]="newEmployee.client" placeholder="Client" name="client">
+  <input type="text" class="form-control" [(ngModel)]="newEmployee.team_size" placeholder="team size" name="team-size">
+  <input type="text" class="form-control" [(ngModel)]="newEmployee.owner" placeholder="Owner" name="owner">
+  <input type="text" class="form-control" [(ngModel)]="newEmployee.start_date" placeholder="Date" name="start-date">
+  <input type="text" class="form-control" [(ngModel)]="newEmployee.status" placeholder="Status" name="status">
+  <button class="btn btn-primary" type="submit">Add</button>
+</form> -->
+
+<!-- <button  (onclick)="fetchPosts()">fetchPosts</button> -->
+
+<!-- <tbody>
+    <tr *ngFor="let country of projects" >
+        <td>
+            {{ country.account }}
+        </td>
+        <td>{{ country.project_name }}</td>
+        <td>{{ country.domain }}</td>
+        <td>{{ country.client }}</td>
+        <td class="align ">{{ country.team_size | number }}</td>
+        <td>{{ country.owner }}</td>
+        <td>{{ country.start_date }}</td>
+        <td>
+
+            <img [src]="'assets/images/svg/' + country.status + '.svg'" class="me-2" style="width: 20px" />
+            {{ country.status }}
+        </td>
+    </tr>
+</tbody> -->
+
+
+
+
+
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+  <select class="form-select" id="account" ngModel name="account">
+    <option value="" selected>All</option>
+    <option *ngFor="let option of accounts" [value]="option.value">
+                    {{ option.label }}
+                </option>
+  </select>
+  <!-- <input type="text" class="form-control"  id="account" required ngModel  placeholder="account" name="account"> -->
+  <input type="text" class="form-control"   id="project_name" required ngModel  placeholder="project_name" name="project_name">
+  <input type="text" class="form-control"  id="domain" required ngModel   placeholder="Domain" name="domain">
+  <input type="text" class="form-control"  id="client" required ngModel   placeholder="Client" name="client">
+  <input  type="number" class="form-control"  id="team_size" required [(ngModel)]="team_size"    placeholder="team size" name="team_size">
+  <input  type="text"  class="form-control"  id="owner" required ngModel   placeholder="Owner" name="owner">
+  <input  type="text" class="form-control"  id="start_date" required ngModel   placeholder="Date" name="start_date">
+  <input type="text" class="form-control"  id="status" required ngModel   placeholder="Status" name="status">
+
+  <button class="btn btn-primary" type="submit">
+    Send Post
+  </button>
+</form>
+
+
+<!-- <button class="btn btn-primary" (click)="onFetchPosts()">
+  Fetch Posts
+</button>
+
+<div class="col-xs-12 col-md-6 col-md-offset-3">
+  <p *ngIf="loadedPosts.length < 1 && !isFetching">No posts available!</p>
+  <ul class="list-group" *ngIf="loadedPosts.length >= 1 && !isFetching">
+    <li class="list-group-item" *ngFor="let post of loadedPosts ">
+      <h3>{{ post.account }}</h3>
+      <p>{{ post.project_name }}</p>
+      <p>{{ post.domain }}</p>
+      <p>{{ post.client }}</p>
+      <p>{{ post.team_size }}</p>
+      <p>{{ post.owner }}</p>
+      <p>{{ post.start_date }}</p>
+      <p>{{ post.status }}</p>
+    </li>
+  </ul>
+  <p *ngIf="isFetching && !error">Loading...</p>
+  <div class="alert alert-danger" *ngIf="error">
+    <h1>An Error Occurred!</h1>
+    <p>{{ error }}</p>
+  </div>
+</div> -->

@@ -1,0 +1,27 @@
+@use '../theme/colors.scss';
+
+thead {
+    background-color: colors.$bg-thead;
+    color: colors.$white;
+    height: 68px;
+}
+
+th {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500 !important;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+
+td {
+    height: 52px;
+    padding-left: 30px;
+    font-weight: 600;
+    color: colors.$td-color;
+    font-size: 14px;
+    line-height: 24px;
+    
+}
+

@@ -1,0 +1,147 @@
+@import 'src/scss/variables/select.scss';
+
+.card{
+    height: calc(100vh - 170px);
+}
+
+.card-body{
+    display: flex;
+   // align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  //  row-gap: 20px;
+    padding: 30px 20px 30px 30px;
+}
+h6{
+    margin-bottom: 20px;
+    color: #11142D;
+    font-weight: 600 !important;
+}
+
+.account-section{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    margin-bottom: 30px;
+}
+
+.select-account{
+    display: flex;
+    flex-direction: column;
+}
+.form-select,.form-control{
+    width: 350px;
+    height: 40px;
+}
+
+button{
+    height: 40px;
+    border-radius: 4px !important;
+}
+
+.btn-width{
+    width: 233px;
+    text-align: start;
+}
+
+.btn-secondary{
+    width: 160px;
+   // margin-right: 16px;
+   // margin-bottom: 20px;
+}
+.assign{
+    width: 200px;
+}
+
+.button-box{
+display: flex;
+column-gap: 16px;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+
+.modal-dialog,.modal-content {
+    background: #04BD00;
+ 
+}
+.modal-dialog{
+    position: relative;
+    right: 0px;
+    top: 50px;
+    left: 480px;
+    border-radius: 4px;
+}
+.modal-content{
+    padding: 20px;
+    padding-bottom: 30px;
+    border: 0px;
+    color: #ffffff;
+}
+.modal-header {
+    height: 35px;
+}
+.btn-close{
+    color: #ffffff;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+
+  .account-section{
+    margin-bottom: 30px;
+  }
+    .form-select,.form-control{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .btn-secondary{
+        margin-bottom: 20px;
+       // margin-top: 10px;
+    }
+    .button-box{
+       margin-top: 0px;
+        }
+    #email{
+        margin: 0px;
+    }
+    }
+
+    @media screen and (max-width: 500px){
+        .card-body{
+          //  padding-right: 30px;
+          padding: 0px;
+          padding-top: 20px;
+        }
+       
+        .form-label{
+            text-align: center;
+        }
+        .btn{
+            justify-items: center;
+        }
+
+        .account-section{
+            justify-content: center;
+        }
+        .button-box{
+           justify-content: center;
+             }
+
+             .modal-dialog{
+                position: relative;
+                right: 0px;
+                top: 50px;
+                left: 0px;
+                border-radius: 4px;
+            }
+    }
+
+    @media screen and (max-width: 390px) {
+    .card{
+         height: 100vh;
+       // min-height: calc(100vh - 170px);
+    }
+}

@@ -1,0 +1,51 @@
+@import './src/scss/variables/buttons.scss';
+
+
+i{
+    margin: 5px;
+}
+.svg{
+    margin-right: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+.logout{
+    position: fixed;
+    bottom: 10px;
+    color: #2C2C2B;
+    
+}
+
+.btn {
+    background-color: #ffffff;
+    border: none;
+color: #003366 !important;
+    font-size: 16px;
+    line-height: 19.2px;
+    cursor: pointer;
+    min-width:216px;
+    text-align:start;
+    margin-bottom: 20px;
+    height: 48px;
+  }
+  .btn:hover{
+    background-color: 
+    #003366 !important;
+    color: white !important;
+  }
+  .btn:focus{
+    color: #ffffff !important;
+  }
+  .class1{
+    background-color: #003366;
+    color: #ffffff !important;
+  }
+
+// .accordion-button[_ngcontent-jcj-c26]::after{
+//     display: contents !important;
+//     width: 0 ;
+// }
+

@@ -1,0 +1,23 @@
+<!-- <a href="#"  class="border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</a> -->
+<div class="container-fluid sidebar-container border-top border-2 border-gray ">
+    <div class="row flex-nowrap">
+        <div class="col-auto px-0 bg-white">
+            <div id="sidebar" class="collapse collapse-horizontal show ">
+                <div id="sidebar-nav" class="list-group   text-sm-start ">
+
+                    <app-sidebar-menu></app-sidebar-menu>
+
+                </div>
+            </div>
+        </div>
+        <main class="col ps-md-2 pt-2">
+           <router-outlet></router-outlet>
+            <!-- <div class="card">
+                <div class="card-body">
+                    <app-main-section></app-main-section>
+                                                  
+                </div>
+            </div> -->
+        </main>
+    </div>
+</div>

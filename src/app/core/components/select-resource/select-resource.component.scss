@@ -1,0 +1,23 @@
+// label{
+//     margin-bottom: 10px;
+// }
+.form-select{
+    width: 350px;
+    height: 40px;
+    //margin-bottom: 20px;
+    border: 1px solid #838380;
+}
+
+@media screen and (max-width: 820px) {
+    .form-select{
+        margin-bottom: 20px;
+    }
+
+  }
+
+  @media screen and (max-width: 700px){
+    .form-select{
+       width: 270px;
+    }
+
+  }

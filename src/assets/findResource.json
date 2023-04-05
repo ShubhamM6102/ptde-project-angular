@@ -1,0 +1,180 @@
+[
+    {
+        "account": "UPRR",
+        "project_name":"UPRR",
+        "manager_name":"Cooper Rosser",
+        "resource_name":"Ryan Dias",
+        "status": "Allocated to Project",
+        "technology":"Angular"
+    
+      },
+      {
+        "account": "UPRR",
+        "project_name":"UPRR",
+        "manager_name":"Cristofeer Siphron",
+        "resource_name":"Madelyn Philips",
+        "status": "Allocated to Project",
+        "technology":"React"
+
+    
+      },
+      {
+        "account": "TradeFree",
+        "project_name":"TradeFree",
+        "manager_name":"Ruen Schiefer",
+        "resource_name":"Justin Botosh",
+        "status": "Available",
+        "technology":"NodeJs"
+    
+      },
+  
+      {
+        "account": "Nike",
+        "project_name":"Nike",
+        "manager_name":"Aspen Baptista",
+        "resource_name":"Kadin George",
+        "status": "Available",
+        "technology":"Angular"    
+      },
+      {
+        "account": "Fx360",
+        "project_name":"Fx360",
+        "manager_name":"Adison Setimus",
+        "resource_name":"Ahmad GeoreRyan",
+        "status": "Available",
+        "technology":"Angular"
+      },
+      {
+        "account": "Valmont",
+        "project_name":"Valmont",
+        "manager_name":"Cooper Rosser",
+        "resource_name":"Ryan Dias",
+        "status": "Allocated to Project",
+        "technology":"Angular"    
+      },
+  
+      {
+        "account": "Ineight",
+        "project_name":"Ineight",
+        "manager_name":"Cristofer Siphron",
+        "resource_name":"Madelyn Philips",
+        "status": "Allocated to Project",
+        "technology":"Angular"
+    
+      },
+      {
+        "account": "Tmobile",
+        "project_name":"Tmobile",
+        "manager_name":"Ruben Schleifer",
+        "resource_name":"Justin Botosch",
+        "status": "Allocated to Project",
+        "technology":"React"
+      },
+      {
+        "account": "Tmobile",
+        "project_name":"Tmobile",
+        "manager_name":"Aspen Baptistar",
+        "resource_name":"kadin George",
+        "status": "Allocated to Project",
+        "technology":"React"
+      },
+
+      {
+        "account": "Tmobile",
+        "project_name":"Tmobile",
+        "manager_name":"Aspen Baptistar",
+        "resource_name":"kadin George",
+        "status": "Allocated to Project",
+        "technology":"React"
+      },
+      {
+        "account": "CommonSpirit",
+        "project_name":"CommonSpirit",
+        "manager_name":"Adison Septimus",
+        "resource_name":"Ahmad George",
+        "status": "Available",
+        "technology":"React"
+    
+      },
+      {
+        "account": "UPRR",
+        "project_name":"UPRR",
+        "manager_name":"Cooper Rosser",
+        "resource_name":"Ryan Dias",
+        "status": "Allocated to Project",
+        "technology":"React"
+    
+      },
+      {
+        "account": "UPRR",
+        "project_name":"UPRR",
+        "manager_name":"Cristofeer Siphron",
+        "resource_name":"Madelyn Philips",
+        "status": "Allocated to Project",
+        "technology":"NodeJs"
+
+    
+      },
+      {
+        "account": "TradeFree",
+        "project_name":"TradeFree",
+        "manager_name":"Ruen Schiefer",
+        "resource_name":"Justin Botosh",
+        "status": "Available",
+        "technology":"NodeJs"
+    
+      },
+  
+      {
+        "account": "Nike",
+        "project_name":"Nike",
+        "manager_name":"Aspen Baptista",
+        "resource_name":"Kadin George",
+        "status": "Available",
+        "technology":"NodeJs"    
+      },
+      {
+        "account": "Fx360",
+        "project_name":"Fx360",
+        "manager_name":"Adison Setimus",
+        "resource_name":"Ahmad GeoreRyan",
+        "status": "Available",
+        "technology":"NodeJs"
+      },
+      {
+        "account": "Valmont",
+        "project_name":"Valmont",
+        "manager_name":"Cooper Rosser",
+        "resource_name":"Ryan Dias",
+        "status": "Allocated to Project",
+        "technology":"Angular"    
+      },
+  
+      {
+        "account": "Ineight",
+        "project_name":"Ineight",
+        "manager_name":"Cristofer Siphron",
+        "resource_name":"Madelyn Philips",
+        "status": "Allocated to Project",
+        "technology":"Angular"
+    
+      },
+      {
+        "account": "Tmobile",
+        "project_name":"Tmobile",
+        "manager_name":"Ruben Schleifer",
+        "resource_name":"Justin Botosch",
+        "status": "Allocated to Project",
+        "technology":"React"
+      },
+      {
+        "account": "CommonSpirit",
+        "project_name":"CommonSpirit",
+        "manager_name":"Adison Septimus",
+        "resource_name":"Ahmad George",
+        "status": "Available",
+        "technology":"Angular"
+    
+      }
+
+    ]

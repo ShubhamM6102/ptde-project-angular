@@ -1,0 +1,53 @@
+@import './src/scss/theme/colors.scss';
+
+// .sidebar-container{
+//     background-color:$white ;
+// }
+#sidebar{
+    height: calc(100vh - 94px);
+    background-color: $white;
+    // background-color:$white ;
+
+#sidebar-nav {
+    width: 250px;
+    padding: 20px;
+    background-color:$white ;
+    // height: 500px;
+   // max-height: calc(100vh - 13vh);
+}
+}
+
+main{
+//    background-color:  #ECECF3;
+background-color: $main-section;
+//background-color: #F5F5F5;
+margin-left: 20px;
+margin-top: 20px;
+//   height: 100vh;
+}
+
+
+       
+.card{
+    // width: 95%;
+    // height: 500px;
+    // margin: 30px 0px 0px 20px;
+    margin: auto;
+}
+
+// .card-body{
+//     min-width: 960px;
+// }
+
+// .flex-nowrap {
+//     height: 100vh;
+// }
+@media screen and (max-width: 810px) {
+    .col-auto{
+        display: none;
+    }
+
+    main{
+        margin-left: 0;
+    }
+  }

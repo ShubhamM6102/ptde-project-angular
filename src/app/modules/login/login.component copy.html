@@ -1,0 +1,57 @@
+<!-- <div><img src="/assets/images/bg.png" alt="background" class="bg"/></div> -->
+<div class="bg">
+  <div class="card " [hidden]="submitted">
+    <div class="card-body d-flex-column">
+      <div class="d-flex">
+        <img src="assets/images/ptde-logo.png" alt="PETE logo" class="logo" />
+        <p>Project Technology and Design Evaluation</p>
+      </div>
+      <form  #myMainLoginForm="ngForm">
+      <div class="form-floating mb-3 mt-3"  >
+        <img src="assets/images/profile.svg" alt="profile svg" class="svg " />
+        <input type="email" class="form-control" id="floatingInput" #u1 [(ngModel)]="name" placeholder="name@example.com" required/>
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <img src="assets/images/lock.svg" alt="lock svg" class="svg" />
+        <input type="password" class="form-control" #p1 [(ngModel)]="password" id="floatingPassword" placeholder="Password" required />
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <input class="btn btn-primary mb-2" routerLink="home/dashboard" type="submit" value="SIGN IN"
+      (click)="submitted=true"
+      [disabled]="!myMainLoginForm.form.valid" (click)="check(u1.value, p1.value)">
+      <span>{{msg}}</span>
+
+      <div class="form-check d-flex-row">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          keep me signed in
+        </label>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div class="bg">
+  <div class="card ">
+    <div class="card-body d-flex-column">
+      <div class="d-flex">
+        <img src="assets/images/ptde-logo.png" alt="PETE logo" class="logo" />
+        <p>Project Technology and Design Evaluation</p>
+      </div>
+
+<div [hidden]="submitted">
+  <form class="mainLoginContainer" #myMainLoginForm="ngForm">
+    
+   
+     <input type="text" name="UserId" #u1 [(ngModel)]="name" placeholder="Enter User Id" required>
+    <input type="password" name="Password" #p1 [(ngModel)]="password" placeholder="Enter Password" required>
+    <button class="btn btn-primary btn-block ms-4 px-5" type="submit" (click)="submitted=true"
+      [disabled]="!myMainLoginForm.form.valid" (click)="check(u1.value, p1.value)"><a
+        routerLink="whole-body-content">Login</a></button>
+    <span>{{msg}}</span>
+  </form>
+</div> -->

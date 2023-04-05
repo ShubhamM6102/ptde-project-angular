@@ -1,0 +1,6 @@
+  <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedValue">
+    <option value="-1" selected>Open this select menu</option>
+    <option *ngFor="let option of options" [value]="option.value">
+        {{ option.label }}
+      </option>
+  </select>

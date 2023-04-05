@@ -1,0 +1,65 @@
+
+<nav class="header d-flex flex-wrap navbar-expand-lg ">
+  <div class="container-fluid d-flex flex-wrap">
+    <!-- logo-section -->
+    <div class="logo">
+      <img src="./assets/images/svg/logo-svg.svg" alt="CNX-LOGO" class="cnx-logo ">
+      <i class="fa fa-bars" data-bs-target="#sidebar" data-bs-toggle="collapse"></i>
+      <span  class="overlay"><app-overlay></app-overlay></span>
+    </div>
+
+    <!-- searchBar-section -->
+    <div class="searchbar">
+      <div class="row   justify-content-center align-items-center">
+        <div class="col">
+          <div class="form">
+           <span><i class="fa fa-magnifying-glass"></i></span> 
+            <input type="text" class="form-control form-input" placeholder="Search anything...">
+            <!-- <span><i class="fa fa-microphone"></i></span> -->
+            <!-- <span><i class="fa fa-magnifying-glass"></i></span> -->
+
+            <!-- <span> <i data-feather="search" class="px-1 pb-2"></i></span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ---------------------------Bell Icon---------------------------- -->
+    <!-- <i class="fa fa-magnifying-glass"></i> -->
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <button type="button" class="icon-button">
+          <i class="fa-regular fa-bell "></i>
+          <span class="icon-button__badge bell-badge bg-danger ">2</span>
+        </button>
+      </li>
+
+      <li class="list-group-item d-flex">
+        <span> <i data-feather="search" class="search-feather"></i></span> 
+        <img src="assets/images/png/circle.png" alt="Avatar" class="avatar">
+        <span class="circle-text">AD</span>
+
+        
+
+        <!-- ----------------------Dropdown------------------------------- -->
+        <div class="d-flex-column me-3"> 
+        <div class="btn-group ">
+          <button class="btn btn-secondary btn-sm dropdown-toggle fw-bold " type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            User Name
+           <!-- hii {{username}} -->
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item" href="javascriptvoid(0)">My Profile</a></li>
+            <li><a class="dropdown-item" href="javascriptvoid(0)">  User Seetings</a></li>
+            <li><a class="dropdown-item" href="javascriptvoid(0)"> Messages</a></li>
+            <li><a class="dropdown-item" routerLink="">   Logout</a></li>
+          </ul>
+        </div>
+       <p class="designation">Admin</p> 
+      </div>
+      </li>
+    </ul>
+  </div>
+</nav>

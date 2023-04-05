@@ -1,0 +1,147 @@
+.bg {
+  background-image: url("/assets/images/png/bg.png");
+  background-repeat: no-repeat;
+  //  background-attachment: fixed;  
+  background-size: cover;
+  //  object-fit: cover;
+  // height: 100vh;
+  //  filter: grayscale(00%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+  margin: auto;
+  padding: 0 40px 0 40px;
+
+}
+
+.card {
+  // width: 330px;
+  width: 490px;
+  height: 547px;
+  //max-height: 560px;
+  align-self: center;
+  padding: 42px 28px 71px 28px;
+  Offset: 0px, 4px rgba(0, 0, 0, 0.25)
+}
+
+// .card-body{
+//    // padding: 4px;
+//     //margin-top: 47px;
+// }
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.form-floating {
+  height: 70px;
+}
+
+
+p {
+  text-align: center;
+  margin-top: 26px;
+  margin-bottom: 48px;
+  font-size: 14px !important;
+  font-weight: 600;
+  line-height: 17px;
+  color: #003366;
+}
+
+.form-control {
+  height: 52px;
+  border: 1px solid gray;
+  border-radius: 0px;
+  //   margin-bottom: 29px;
+  padding-left: 30px;
+}
+
+label {
+  //padding: 10px;
+  color: #838380;
+  font-size: 16px;
+  padding-left: 33px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.form-check {
+  display: flex;
+  flex-direction: row;
+  margin-top: 28px;
+}
+
+.form-check-label {
+  //  padding: 10px;
+  padding-left: 10px;
+  color: #003366;
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 8px;
+  //  margin-top: 28px;
+}
+
+.btn {
+  height: 52px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 2px;
+  background-color: #F00D0D;
+  // border-color: #F00D0D;
+  // border-color: red;
+  font-weight: bold;
+  // margin-bottom: 28px;
+
+}
+
+.form-check-input {
+  width: 25px;
+  height: 28px;
+  //  font-size: 16px;
+  //  position: absolute;
+  //  bottom: 71px;
+  // left: 48px;
+  border-radius: 4px;
+  border: 1px solid darkblue;
+}
+
+.svg {
+  position: absolute;
+  top: 15px;
+  margin: 0 5px 0 8px;
+}
+
+//--------------Validation---------
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.help-block {
+  color: red;
+  font-size: 14px;
+}
+
+.form-error {
+  color: red;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card {
+    min-height: 570px;
+  }
+}
